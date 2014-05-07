@@ -1,0 +1,21 @@
+{
+  "name": "gulp-component-builder",
+  "version": "0.1.0",
+  "description": "component build plugin for gulp",
+  "main": "lib/index.js",
+  "author": "Florent Cailhol",
+  "homepage": "https://github.com/ooflorent/gulp-component-builder",
+  "repository": "git://github.com/ooflorent/gulp-component-builder.git",
+  "license": "MIT",
+  "keywords": [
+    "gulpplugin",
+    "component"
+  ],
+  "dependencies": {
+    "async": "~0.8.0",
+    "component-builder": "^1.1.5",
+    "component-resolver": "^1.1.1",
+    "gulp-util": "~2.2.14",
+    "through2": "~0.4.1"
+  }
+}
