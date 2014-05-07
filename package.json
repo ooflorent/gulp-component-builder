@@ -1,6 +1,6 @@
 {
   "name": "gulp-component-builder",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "component build plugin for gulp",
   "main": "lib/index.js",
   "author": "Florent Cailhol",
