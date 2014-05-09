@@ -15,7 +15,7 @@ $ npm install --save-dev gulp-component-builder
 ```js
 var gulp = require('gulp');
 var component = require('gulp-component-builder');
-var stylus = require('component-stylus-plugin');
+var less = require('builder-less');
 
 gulp.task('scripts', function() {
   return gulp.src('component.json')
@@ -26,14 +26,14 @@ gulp.task('scripts', function() {
 gulp.task('styles', function() {
   return gulp.src('component.json')
     .pipe(component.styles(function(builder) {
-      builder.use(stylus)
+      builder.use('styles', less());
     }))
     .pipe(gulp.dest('build'));
 });
 
 gulp.task('watch', function() {
   gulp.watch(['component.json', 'lib/**/*.js'], ['scripts'])
-  gulp.watch(['component.json', 'lib/**/*.styl'], ['styles'])
+  gulp.watch(['component.json', 'lib/**/*.less'], ['styles'])
 });
 
 gulp.task('default', ['scripts', 'styles']);
